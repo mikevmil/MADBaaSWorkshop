@@ -27,14 +27,24 @@ public class GalleryActivity extends AppCompatActivity {
 
         Toast.makeText(this, "Downloading images...", Toast.LENGTH_SHORT).show();
 
-        //TODO: Use the Backendless API to download all of the images of the logged in user.
+        //TODO: Make a query to Backendless so you get all objects/records for all the uploaded photos.
 
+                //TODO: Use this code when you've received all objects/records.
+//                new Thread() {
+//                    @Override
+//                    public void run() {
+//                        List<PhotoEntity> photoEntities = response.getCurrentPage();
+//
 //                        for (PhotoEntity photoEntity : photoEntities) {
 //                            Message message = new Message();
 //                            ArrayList<Object> messageContainer = new ArrayList<>();
 //                            try {
-//                                //TODO: Download the photo here and put it in messageContainer[0]
-//                                InputStream input = null;
+//                                //TODO: Get the url of the photo which is stored in the entitiy.
+//                                URL url = null;
+//                                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//                                connection.setDoInput(true);
+//                                connection.connect();
+//                                InputStream input = connection.getInputStream();
 //                                messageContainer.add(0, BitmapFactory.decodeStream(input));
 //                                messageContainer.add(1, photoEntity);
 //                            } catch (Exception e) {
@@ -44,6 +54,8 @@ public class GalleryActivity extends AppCompatActivity {
 //
 //                            imagesHandler.sendMessage(message);
 //                        }
+//                    }
+//                }.start();
 
     }
 
